@@ -19,8 +19,7 @@ public class MenuService {
     public List<MenuDto> getAllMenus() {
 
         List<Menu> menus = menuRepository.findAll();
-        List<MenuDto> menuDtos = menus.stream().map(MenuDto::new).toList();
 
-        return menuDtos;
+        return menus.stream().map(MenuDto::new).toList();
     }
 }

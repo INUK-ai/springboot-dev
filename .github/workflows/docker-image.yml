@@ -69,9 +69,9 @@ jobs:
       with:
         aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }} ## 계정 ACCESS KEY 값
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        application_name: ${{ secrets.EB_APP_NAME }} ## AWS EB 애플리케이션 이름 : spring-docker-28
+        application_name: ${{ secrets.EB_APP_NAME }} ## AWS EB 애플리케이션 이름
         environment_name: ${{ secrets.EB_ENV_NAME }} ## AWS EB 환경 이름
-        version_label: earth-docker-${{steps.current-time.outputs.formattedTime}} : Spring-docker-28
+        version_label: earth-docker-${{steps.current-time.outputs.formattedTime}}
         region: ${{ secrets.AWS_REGION }}    ## ap-northeast-2
         deployment_package: deploy/deploy.zip
         wait_for_environment_recovery: 200

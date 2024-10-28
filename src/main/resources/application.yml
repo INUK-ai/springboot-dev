@@ -1,6 +1,18 @@
-spring:
-  profiles:
-    active: local
+server:
+  port: 8888
 
-  application:
-    name: demoElasticBeansTalk
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${ DATABASE_USERNAME }
+    password: ${ DATABASE_PASSWORD }
+    url: ${ DATABASE_URL }
+
+  jpa:
+    show-sql: true
+    database: mysql
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
